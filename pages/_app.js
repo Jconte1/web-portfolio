@@ -1,5 +1,5 @@
 import React from 'react';
-import '../global.css';  // Adjusted the path to point to the root directory
+import '../global.css'; 
 
 
 export default function MyApp({ Component, pageProps }) {
