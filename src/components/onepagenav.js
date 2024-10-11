@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link'; // Use Next.js Link
-import styles from './OnePageNav.module.css';  // Adjust according to your path
+import styles from './onepagenav.module.css';  // Adjust according to your path
 
 function OnePageNav() {
     return (
