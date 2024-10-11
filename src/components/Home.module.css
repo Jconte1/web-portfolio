@@ -1,0 +1,21 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg,rgb(254, 255, 255) 0%, rgba(74,188,237,1) 65%);
+    color: #ffffff; 
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .textLarge {
+    font-size: 1.125rem; 
+  }
+
+  .blogContainer{
+    z-index: 10;
+    position: relative;
+  }

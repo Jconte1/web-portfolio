@@ -1,0 +1,97 @@
+.AppContainer {
+  max-width: 100%;
+  height: 100vh;
+  background-color: #232424;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -4rem;
+  z-index: 10;
+  
+}
+
+.Wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Text {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  letter-spacing: 1px;
+}
+
+.Note {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 40px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.Marquee {
+  display: flex;
+  width: 1200px;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(to right, transparent, #232424 10%, #232424 90%, transparent);
+}
+
+@keyframes scrollX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.MarqueeGroup,
+.MarqueeGroup2 {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  width: 100%;
+  animation: scrollX 30s linear infinite;
+  background-color: #232424;
+}
+
+.MarqueeGroup2 {
+  animation-direction: reverse;
+  animation-delay: -3s;
+}
+
+.ImageGroup {
+  display: grid;
+  place-items: center;
+  width: clamp(10rem, 1rem + 40vmin, 30rem);
+  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+  background-color: #232424;
+}
+
+.Image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+  padding: 5px 20px;
+  box-shadow: rgba(218, 218, 218, 0.6) 0px 2px 8px 0px;
+}
+
+.ImageTitle{
+  font-size: 1.5rem;
+  color: white;
+}

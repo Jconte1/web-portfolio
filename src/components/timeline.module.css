@@ -1,0 +1,131 @@
+/* Timeline.module.css */
+
+.timelineContainer {
+    margin-right: 25%;
+    margin-bottom: 1%;
+    position: relative;
+    display: flex;
+    z-index: 10;
+  }
+
+  .timelineTitle{
+    font-family: "adriane", serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .timelineTitle2{
+    font-size: 1.5rem;
+    font-family: "adriane", serif;
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    
+  }
+  
+  .timelineLine {
+    width: 0.125rem;
+    height: 1.5rem;
+    position: relative;
+    opacity: 0.6;
+    z-index: 10;
+  }
+  
+  .lineLeft {
+    transform: translateX(5rem) translateY(14rem);
+  }
+  
+  .lineRight {
+    transform: translateX(20rem) translateY(14rem);
+  }
+  
+  .lineSmHidden {
+    display: none;
+  }
+  
+  .timelineDateContainer {
+    display: flex;
+    align-items: start;
+    width: 11rem;
+    padding-top: 0.125rem;
+    position: relative;
+    z-index: 5;
+    margin: 0 10%;
+  }
+  
+  .dateText {
+    width: 80%;
+    color: white; 
+    font-size: 1.1rem;
+  }
+  
+  .verticalLine {
+    width: 0.125rem;
+    height: 100%;
+    transform: translateX(1.25rem) translateY(2.5rem);
+    opacity: 0.3;
+    
+  }
+  
+  .horizontalLine {
+    height: 0.125rem;
+    width: 2rem;
+    transform: translateY(1.25rem);
+    opacity: 0.3;
+    
+  }
+  
+  .contentBox {
+    border: 1px solid #4B5563; /* gray-600 */
+    border-radius: 0.5rem;
+    padding: 32px;
+    background-color: #1F2937; /* gray-800 */
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .titleText {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .locationText {
+    color: #D1D5DB; /* gray-300 */
+    margin-bottom: 24px;
+  }
+  
+  .descriptionText {
+    margin-bottom: 16px;
+    
+  }
+  
+  .techContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  
+  .techItem {
+    background-color: #111827; /* gray-900 */
+    border-radius: 0.75rem;
+    padding: 8px;
+    margin: 4px;
+    font-size: 0.875rem;
+  }
+  
+  .button {
+    color: #1F2937; /* gray-950 */
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 0.375rem;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    color: #FFFFFF; /* white */
+  }
+  
