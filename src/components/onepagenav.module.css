@@ -11,7 +11,7 @@
   background-color: #87CEEB;
   opacity: 0.8;
   justify-content: center;
-  z-index: 1000;
+  z-index: 1100;
   align-items:start;
   transform: translateX(10%); 
   transition: transform 0.3s ease, opacity 0.3s ease;
