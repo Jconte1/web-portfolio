@@ -14,7 +14,7 @@ function Cards() {
                         <p>MLD.COM is a comprehensive website I developed for a luxury showroom specializing in high-end appliances, plumbing, and hardware. 
                             The site features a dynamic and responsive design, integrating a custom CMS to empower the content team with seamless control over product displays, 
                             showroom information, and customer engagement.</p>
-                        <a href="https://mld.com/" className={styles.button}>Explore the Site!</a>
+                        <a href="https://mld-website.vercel.app/" className={styles.button}>Explore the Site!</a>
                     </div>
                 </div>
             </div>

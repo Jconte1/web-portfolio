@@ -95,7 +95,7 @@ function Intro() {
             </div>
           ))}
         </motion.h3>
-        <Image />
+        {/* <Image /> */}
         </div>
       </div>
     </div>

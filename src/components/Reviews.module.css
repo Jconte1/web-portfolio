@@ -1,56 +1,66 @@
 .AppContainer {
-  max-width: 100%;
-  height: 100vh;
+  width: 100%;
+
   background-color: #232424;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: -4rem;
-  z-index: 10;
-  
+  margin-top: -2px;
+  padding: 3% 0;
+  z-index: 1000;
 }
 
 .Wrapper {
   width: 100%;
-  height: fit-content;
+  
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 
 .Text {
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 10px;
+  font-family: "adriane", sans-serif;
+  font-size: 2rem;
+  opacity: 0.8;
+  margin: 0 2%;
   color: white;
+  font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
-  border: 1px solid white;
-  letter-spacing: 1px;
+  
+  
+  text-align: center;
 }
 
+
+
 .Note {
-  font-size: 1.5rem;
+  font-size: 18px;
   font-weight: 200;
-  margin-bottom: 40px;
+  margin: 2% 10%;
+  text-align: center;
   color: white;
   letter-spacing: 1px;
+
 }
 
 .Marquee {
   display: flex;
-  width: 1200px;
+  width: 100%;
   overflow: hidden;
-  user-select: none;
-  mask-image: linear-gradient(to right, transparent, #232424 10%, #232424 90%, transparent);
+  user-select: auto;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  margin: 1%;
 }
 
 @keyframes scrollX {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -63,35 +73,74 @@
   align-items: center;
   justify-content: space-around;
   white-space: nowrap;
-  width: 100%;
-  animation: scrollX 30s linear infinite;
+  width: auto;
+  animation: scrollX 60s linear infinite;
   background-color: #232424;
+
+
+  overflow: hidden;
 }
 
 .MarqueeGroup2 {
   animation-direction: reverse;
-  animation-delay: -3s;
+}
+
+.ImageGroup:first-child {
+  margin-left: auto;
 }
 
 .ImageGroup {
   display: grid;
-  place-items: center;
-  width: clamp(10rem, 1rem + 40vmin, 30rem);
-  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-right: .25%;
+  box-shadow: rgba(255, 252, 252, 0.35) 0px 5px 15px;
+  width: 500px;
+  height: 250px;
   background-color: #232424;
-}
-
-.Image {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  padding: 5px 20px;
-  box-shadow: rgba(218, 218, 218, 0.6) 0px 2px 8px 0px;
-}
-
-.ImageTitle{
-  font-size: 1.5rem;
   color: white;
+  border-radius: 10px;
+  margin: .25%;
+}
+
+@media screen and (max-width: 768px) {
+  .ImageGroup {
+    width: 250px;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  }
+}
+
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.reviewDescription {
+  display: flex;             
+  justify-content: center;   
+  align-items: center;        
+  text-align: center;     
+  height: 100%;    
+}
+
+.Review {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 4rem;
+  white-space: normal;
+  margin: auto 5%;
+}
+
+@media screen and (max-width:768px) {
+  .Review {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 2rem;
+    white-space: normal;
+    margin: auto 5%;
+  }
 }

@@ -2,18 +2,25 @@ import React from "react";
 import styles from "./Reviews.module.css"; // Import the CSS module here
 
 function App() {
+  const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FF5733"]; // Define your color array
+
   const row1 = [
-    { id: '1', image: '/images/nodejs.png', title: 'Node.js' },
-    { id: '2', image: '/images/html.png', title: 'HTML + CSS + JavaScript' },
-    { id: '3', image: '/images/react.png', title: 'React.js' },
+    { index: "1", review: "MICROSOFT OFFICE " },
+    { index: "2", review: "NODE.JS" },
+    { index: "3", review: "REACT" },
+    { index: "4", review: "HTML & CSS" },
   ];
 
   const row2 = [
-    { id: '4', image: '/images/microsoft.png', title: 'Microsoft OFfice' },
-    { id: '5', image: '/images/vs.png', title: 'Visual Studio' },
-    { id: '6', image: '/images/nextjs.png', title: 'Next.js' },
-    { id: '7', image: '/images/sanity.png', title: 'Sanity.io (cms)' },
+    { index: "1", review: "NEXT.JS" },
+    { index: "2", review: "JAVASCRIPT" },
+    { index: "3", review: "SEO" },
+    { index: "4", review: "SANITY.IO (CMS)" },
+    { index: "5", review: "VIRTUAL STUDIO" },
   ];
+
+ 
+  const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
   return (
     <div className={styles.AppContainer}>
@@ -22,38 +29,76 @@ function App() {
         <div className={styles.Note}>
           The skills that have helped me become the developer I am today
         </div>
+        
+        {/* First Marquee */}
         <div className={styles.Marquee}>
           <div className={styles.MarqueeGroup}>
-            {row1.map((el) => (
-              <div key={el.id} className={styles.ImageGroup}>
-                <img src={el.image} alt={el.title} className={styles.Image} />
-                <h2 className={styles.ImageTitle}>{el.title}</h2>
+            {row1.map((el, index) => (
+              <div key={index} className={styles.ImageGroup}>
+                <div className={styles.content}>
+                  <div className={styles.reviewDescription}>
+                    <p 
+                      className={styles.Review}
+                      style={{ color: getRandomColor() }} // Apply random color to each <p>
+                    >
+                      {el.review}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
+          
           <div className={styles.MarqueeGroup}>
-            {row1.map((el) => (
-              <div key={el.id} className={styles.ImageGroup}>
-                <img src={el.image} alt={el.title} className={styles.Image} />
-                <h2 className={styles.ImageTitle}>{el.title}</h2>
+            {row1.map((el, index) => (
+              <div key={index} className={styles.ImageGroup}>
+                <div className={styles.content}>
+                  <div className={styles.reviewDescription}>
+                    <p 
+                      className={styles.Review}
+                      style={{ color: getRandomColor() }}
+                    >
+                      {el.review}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
+
+        {/* Second Marquee for row2 */}
         <div className={styles.Marquee}>
           <div className={styles.MarqueeGroup2}>
-            {row2.map((el) => (
-              <div key={el.id} className={styles.ImageGroup}>
-                <img src={el.image} alt={el.title} className={styles.Image} />
-                <h2 className={styles.ImageTitle}>{el.title}</h2>
+            {row2.map((el, index) => (
+              <div key={index} className={styles.ImageGroup}>
+                <div className={styles.content}>
+                  <div className={styles.reviewDescription}>
+                    <p 
+                      className={styles.Review}
+                      style={{ color: getRandomColor() }}
+                    >
+                      {el.review}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
+          
           <div className={styles.MarqueeGroup2}>
-            {row2.map((el) => (
-              <div key={el.id} className={styles.ImageGroup}>
-                <img src={el.image} alt={el.title} className={styles.Image} />
-                <h2 className={styles.ImageTitle}>{el.title}</h2>
+            {row2.map((el, index) => (
+              <div key={index} className={styles.ImageGroup}>
+                <div className={styles.content}>
+                  <div className={styles.reviewDescription}>
+                    <p 
+                      className={styles.Review}
+                      style={{ color: getRandomColor() }}
+                    >
+                      {el.review}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

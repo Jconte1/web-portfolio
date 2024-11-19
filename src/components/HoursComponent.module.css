@@ -8,33 +8,8 @@
     position: relative;
 }
 
-@media screen and (min-width: 320px) {
-    .container{
-        margin-bottom: 15%;
-        z-index: 400;
-    }
-}
-@media screen and (min-width: 360px) {
-    .container{
-        margin-bottom: 15%;
-    }
-}
-@media screen and (min-width: 500px) {
-    .container{
-        margin-bottom: 10%;
-    }
-}
-@media screen and (min-width: 900px) {
-    .container{
-        margin-bottom: 5%;
-    }
-}
-@media screen and (min-width: 1024px) {
-    .container{
-        margin-bottom: 0%;
-        
-    }
-}
+
+
 
 .title {
     font-family: "adriane", serif;
@@ -43,104 +18,32 @@
     color: white;
     z-index: 400;
     opacity: 0.9;
+    margin-top: -1px;
 }
+
 
 .gridWrapper {
     display: grid;
-    grid-gap: 3%;
+    grid-gap: 1%;
     padding: 1%;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 225px;
+    grid-template-columns: repeat(2, 270px);
+    grid-auto-rows: 150px;
     grid-auto-flow: dense;
     justify-content: center;
     align-items: center;
     max-width: 100%; 
-    margin: 0 25%;
-    z-index: 400;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (max-width:710px){
     .gridWrapper {
-        
-        margin: 0 28.5%;
-        
+        grid-template-columns: repeat(2, 270px);
     }
 }
 
-
-
-@media screen and (min-width: 750px) {
+@media screen and (max-width:570px){
     .gridWrapper {
         
-        margin: 0 30%;
-        
-    }
-}
-
-@media screen and (min-width: 950px) {
-    .gridWrapper {
-        
-        margin: 0 5%;
-        
-    }
-}
-
-
-@media screen and (min-width: 1150px) {
-    .gridWrapper {
-        
-        margin: 0 11%;
-        
-    }
-}
-
-@media screen and (min-width: 1250px) {
-    .gridWrapper {
-        
-        margin: 0 14%;
-        
-    }
-}
-@media screen and (min-width: 1350px) {
-    .gridWrapper {
-        
-        margin: 0 17%;
-        
-    }
-}
-@media screen and (min-width: 1450px) {
-    .gridWrapper {
-        
-        margin: 0 20%;
-        
-    }
-}
-@media screen and (min-width: 1550px) {
-    .gridWrapper {
-        
-        margin: 0 23%;
-        
-    }
-}
-@media screen and (min-width: 1650px) {
-    .gridWrapper {
-        
-        margin: 0 20%;
-        
-    }
-}
-@media screen and (min-width: 1750px) {
-    .gridWrapper {
-        
-        margin: 0 23.5%;
-        
-    }
-}
-@media screen and (min-width: 1850px) {
-    .gridWrapper {
-        
-        margin: 0 25%;
-        z-index: 400;
+        grid-template-columns: repeat(1, 270px);
     }
 }
 
@@ -169,7 +72,7 @@
     opacity: 0.8;
     line-height: 1.5;
     
-    margin: 14% 8%;
+   
 }
 
 .gridWrapperText .infoBox{
